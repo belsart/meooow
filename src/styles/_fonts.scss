@@ -1,0 +1,57 @@
+@import './_vars.scss';
+
+@mixin header() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+@mixin text() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@mixin title() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
+@mixin subtitle() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+@mixin small() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+@mixin weightFirstPart() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 0.4;
+    font-weight: 400;
+}
+
+@mixin weightSecondPart() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    line-height: 0;
+    font-weight: 400;
+}
+
+@mixin underCard() {
+    font-family: 'Exo 2', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+}

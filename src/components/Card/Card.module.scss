@@ -1,0 +1,223 @@
+@import '../../styles/_fonts.scss';
+@import '../../styles/vars.scss';
+
+.card {
+    @media (max-width: 1079px) {
+        &:nth-child(1) {
+            grid-column-start: one;
+            grid-column-end: three;
+            grid-row-start: one;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:nth-child(2) {
+            grid-column-start: one;
+            grid-column-end: one;
+            grid-row-start: two;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:nth-child(3) {
+            grid-column-start: two;
+            grid-column-end: two;
+            grid-row-start: two;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.wrapper {
+    @mixin wrapper() {
+        background-color: $light-grey;
+        color: $black;
+        position: relative;
+        border-radius: 12px;
+        width: 320px;
+        height: 480px;
+        clip-path: polygon(0 48px, 48px 0, 100% 0, 100% 100%, 0 100%);
+        padding: 21px 0 0 48px;
+        border: 4px solid $blue;
+        cursor: pointer;
+    }
+    @include wrapper();
+    &__hover {
+        @include wrapper();
+        border: 4px solid $hoverBlue;
+    }
+    &__selected {
+        @include wrapper();
+        border: 4px solid $red;
+    }
+    &__selectedHover {
+        @include wrapper();
+        border: 4px solid $hoverRed;
+    }
+    &__disabled {
+        @include wrapper();
+        border: 4px solid $disabled;
+        cursor: default;
+    }
+}
+
+.corner {
+    @mixin corner() {
+        width: 80px;
+        height: 80px;
+        border: 4px solid $blue;
+        position: absolute;
+        top: -46px;
+        left: -46px;
+        rotate: 45deg;
+    }
+    @include corner();
+
+    &__hover {
+        @include corner();
+        border: 4px solid $hoverBlue;
+    }
+    &__selected {
+        @include corner();
+        border: 4px solid $red;
+    }
+    &__selectedHover {
+        @include corner();
+        border: 4px solid $hoverRed;
+    }
+    &__disabled {
+        @include corner();
+        border: 4px solid $disabled;
+    }
+}
+
+.weight {
+    @mixin weight() {
+        width: 80px;
+        height: 80px;
+        background-color: $blue;
+        border-radius: 40px;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @include weight();
+
+    &__hover {
+        @include weight();
+        background-color: $hoverBlue;
+    }
+    &__selected {
+        @include weight();
+        background-color: $red;
+    }
+    &__selectedHover {
+        @include weight();
+        background-color: $hoverRed;
+    }
+    &__disabled {
+        @include weight();
+        background-color: $disabled;
+    }
+
+    &__firstPart {
+        @include weightFirstPart();
+        color: $white;
+    }
+
+    &__secondPart {
+        @include weightSecondPart();
+        color: $white;
+    }
+}
+
+.cat {
+    @mixin cat() {
+        width: 320px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 0 0 0 8px;
+    }
+    @include cat();
+
+    &__disabled {
+        @include cat();
+        opacity: 50%;
+    }
+}
+
+.text {
+    @include text();
+    color: $grey;
+    &__selected {
+        @include text();
+        color: $hoverRed;
+    }
+    &__disabled {
+        @include text();
+        color: $disabled;
+        opacity: 50%;
+    }
+}
+
+.title {
+    @include title();
+    color: $black;
+
+    &__disabled {
+        @include title();
+        color: $disabled;
+        opacity: 50%;
+    }
+}
+
+.taste {
+    @include subtitle();
+    &__disabled {
+        @include subtitle();
+        color: $disabled;
+        opacity: 50%;
+    }
+}
+
+.small {
+    @include small();
+    color: $grey;
+    margin-top: 15px;
+
+    &__disabled {
+        @include small();
+        color: $disabled;
+        margin-top: 15px;
+        opacity: 50%;
+    }
+}
+
+.underCard {
+    @include underCard();
+    color: $white;
+    margin-top: 14px;
+    text-align: center;
+    &__disabled {
+        @include underCard();
+        color: $yellow;
+        margin-top: 14px;
+        text-align: center;
+    }
+}
+
+.dash {
+    border-bottom: 1px dashed $blue;
+    color: $blue;
+    cursor: pointer;
+}
